@@ -9,10 +9,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-click = "^8.1.8"
+click = "^8.2.1"
 python-decouple = "^3.8"
 elasticsearch-dsl = "^7.4.1"
-selectolax = "^0.3.28"
+selectolax = "^0.3.29"
 
 [tool.poetry.group.dev]
 optional = true
@@ -20,7 +20,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 black = "^25.1"
 flake8 = "^7.2.0"
-pytest = "^8.3.5"
+pytest = "^8.4.0"
 
 [tool.poetry.scripts]
 deployer = "deployer.main:cli"
