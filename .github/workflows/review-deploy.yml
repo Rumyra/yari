@@ -34,7 +34,7 @@ jobs:
       - name: Print information about CPU
         run: cat /proc/cpuinfo
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
