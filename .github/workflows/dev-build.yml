@@ -49,9 +49,9 @@ jobs:
         run: |
           echo "PREFIX=${{ github.event.inputs.deployment_prefix || env.DEFAULT_DEPLOYMENT_PREFIX }}" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/content
           path: mdn/content
@@ -61,24 +61,24 @@ jobs:
           # so we can figure out each document's last-modified date.
           fetch-depth: 0
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/mdn-studio
           path: mdn/mdn-studio
           lfs: true
           token: ${{ secrets.MDN_STUDIO_PAT }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/generic-content
           path: mdn/generic-content
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/curriculum
           path: mdn/curriculum
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/translated-content
           path: mdn/translated-content
@@ -86,7 +86,7 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout (translated-content-de)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: mdn/translated-content-de
           path: mdn/translated-content-de
@@ -102,7 +102,7 @@ jobs:
           git add files/de
           git -c user.name='MDN' -c user.email='mdn-dev@mozilla.com' commit -m 'de'
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: mdn/mdn-contributor-spotlight
           path: mdn/mdn-contributor-spotlight
